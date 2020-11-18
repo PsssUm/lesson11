@@ -4,22 +4,30 @@
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     android:orientation="vertical">
-    <LinearLayout
-        android:id="@+id/progressLL"
-        android:background="@color/colorAccent"
-        android:layout_width="wrap_content"
-        android:layout_height="3dp"
-        android:orientation="vertical"/>
     <TextView
         android:id="@+id/progressTV"
         android:layout_marginTop="8dp"
         android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-    <LinearLayout
-        android:id="@+id/animateProgressLL"
-        android:background="@color/colorAccent"
-        android:layout_width="wrap_content"
-        android:layout_height="3dp"
-        android:orientation="vertical"/>
+    <com.learneasy.lesson8.LinearProgress
+        android:id="@+id/linearProgress"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_height="3dp"/>
+    <com.learneasy.lesson8.LinearProgress
+        android:id="@+id/linearProgress2"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_height="3dp"/>
+    <com.learneasy.lesson8.LinearProgress
+        android:id="@+id/linearProgress3"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_height="3dp"/>
+    <com.learneasy.lesson8.LinearProgress
+        android:id="@+id/linearProgress4"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_height="3dp"/>
 </LinearLayout>

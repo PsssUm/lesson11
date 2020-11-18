@@ -22,11 +22,11 @@ class MainActivity : AppCompatActivity() {
             for (x in 0 until 101){
                 runOnUiThread(Runnable {
                     val progress = (x.toFloat() / 100)
-                    val params = progressLL.layoutParams
                     val progressWidth = (progress * width).toInt()
-                    animateProgress(params.width, progressWidth, animateProgressLL)
-                    params.width = progressWidth
-                    progressLL.layoutParams = params
+                    linearProgress.animateProgress(progressWidth)
+                    linearProgress2.animateProgress(progressWidth)
+                    linearProgress3.animateProgress(progressWidth)
+                    linearProgress4.animateProgress(progressWidth)
                     progressTV.text = "$x%"
                 })
                 Thread.sleep(100)
@@ -34,16 +34,7 @@ class MainActivity : AppCompatActivity() {
         })
         thread.start()
     }
-    private fun animateProgress(startWidth : Int, endWidth : Int, view : LinearLayout){
-        val animator = ValueAnimator.ofInt(startWidth, endWidth).setDuration(100)
-        animator.addUpdateListener {
-            view.layoutParams.width = it.animatedValue as Int
-            view.requestLayout()
-        }
-        val animatorSet = AnimatorSet()
-        animatorSet.play(animator)
-        animatorSet.start()
-    }
+
 
 
 }
